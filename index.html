@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem</title>
+    <style>
+        /* Center the entire page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            margin: 0; /* Remove default body margin */
+            background-color: #f4f4f4; /* Optional background color */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center; /* Center all the text inside container */
+            padding: 20px;
+            background-color: #fff; /* Optional background color */
+            border-radius: 10px; /* Optional rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for container */
+        }
+
+        /* Optional styling for the images */
+        img {
+            margin-bottom: 20px; /* Space between images and other content */
+        }
+
+        .wheel {
+            margin-bottom: 20px; /* Space between wheel image and text */
+        }
+
+        #clock {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .instructions {
+            margin-bottom: 20px;
+        }
+
+        .swipe-button {
+            text-decoration: none;
+            background-color: #4CAF50; /* Green background for the button */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .swipe-button:hover {
+            background-color: #45a049; /* Slightly darker green on hover */
+        }
+    </style>
+    
+    <script>
+        function updateClock() {
+            const now = new Date(); // Get the current date and time
+            const timeString = now.toLocaleTimeString(); // Format the time as HH:MM:SS
+            document.getElementById('clock').textContent = timeString; // Update the content of the clock div
+        }
+
+        // Call updateClock every 1000 milliseconds (1 second)
+        setInterval(updateClock, 1000);
+
+        // Call it once immediately to show time without delay
+        updateClock();
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Correct paths to the images in static folder -->
+        <img src="static/Scolarest.png" alt="Scolarest Image" width="100" height="50">
+        
+        <div class="wheel">
+            <img src="static/wheel.png" alt="Wheel Diagram" width="100" height="200">
+        </div>
+        
+        <p><div id="clock"></div></p>
+        
+        <div class="instructions">
+            <p>Congratulations! You must now present this page to a member of the Scolarest on-site catering team who will instruct you as to how to get your reward.</p>
+            <p>click to redeem.</p>
+        </div>
+        
+        <a href="redeemed.html" class="swipe-button">CLICK TO REDEEM</a>
+    </div>
+</body>
+</html>
